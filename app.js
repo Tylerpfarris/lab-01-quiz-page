@@ -1,12 +1,10 @@
 import { countsAsAYes } from './utils.js';
 
-// import functions and grab DOM elements
 const quizButton = document.getElementById('launch-quiz');
-
 const injectArea = document.getElementById('inject-area');
 
 quizButton.addEventListener('click', () => {
-
+    
     alert('Welcome!');
 
     const confirmation = confirm('So you wanna take a quiz?');
@@ -22,22 +20,12 @@ quizButton.addEventListener('click', () => {
     if (!confirmation) return;
 
     if (!countsAsAYes(firstQuestion))++correctAnswer;
-
-    // if (firstQuestion.charAt(0).toUpperCase() !== 'Y') ;
-        
-    if (secondQuestion.charAt(0).toUpperCase() === 'Y') ++correctAnswer;
-
-    if (thirdQuestion.charAt(0).toUpperCase() !== 'Y') ++correctAnswer;
+    if (countsAsAYes(secondQuestion))++correctAnswer;
+    if (!countsAsAYes(thirdQuestion))++correctAnswer;
 
     const resultString = `Way to go ${firstName} ${lastName}!! You got ${correctAnswer} correct!`;
 
-    injectArea.textContent = resultString;
-
-    
-    
+    injectArea.textContent = resultString;  
 });
 
 
-// initialize state
-
-// set event listeners to update state and DOM  
