@@ -9,13 +9,19 @@ quizButton.addEventListener('click', () => {
 
     const confirmation = confirm('So you wanna take a quiz?');
     
-    if (confirmation === false) {
-        return;
+    if (!confirmation) return;
+
+    const firstName = prompt('Whats ur first name?');
+    const lastName = prompt('Whats ur last name?');
+
+    const firstQuestion = prompt('Is Mezcal made out of Bananas?');
+
+    let correctAnswer = 0;
+
+    if (firstQuestion.charAt(0).toUpperCase() !== 'Y'){
+        ++correctAnswer;
+        console.log('way to go');
     }
-
-
-    
-    
     console.log('I Work');
 });
 
