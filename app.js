@@ -26,7 +26,9 @@ quizButton.addEventListener('click', () => {
 
     if (thirdQuestion.charAt(0).toUpperCase() !== 'Y') ++correctAnswer;
 
-    
+    const resultString = `Way to go ${firstName} ${lastName}!! You got ${correctAnswer} correct!`;
+
+    injectArea.textContent = resultString;
 
     
     console.log('I Work');
