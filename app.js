@@ -1,3 +1,5 @@
+import { countsAsAYes } from './utils.js';
+
 // import functions and grab DOM elements
 const quizButton = document.getElementById('launch-quiz');
 
@@ -9,8 +11,6 @@ quizButton.addEventListener('click', () => {
 
     const confirmation = confirm('So you wanna take a quiz?');
     
-    if (!confirmation) return;
-
     const firstName = prompt('Whats ur first name?');
     const lastName = prompt('Whats ur last name?');
 
@@ -19,8 +19,11 @@ quizButton.addEventListener('click', () => {
     const thirdQuestion = prompt('Does Mezcal make you hallucinate?');
 
     let correctAnswer = 0;
+    if (!confirmation) return;
 
-    if (firstQuestion.charAt(0).toUpperCase() !== 'Y') ++correctAnswer;
+    if (!countsAsAYes(firstQuestion))++correctAnswer;
+
+    // if (firstQuestion.charAt(0).toUpperCase() !== 'Y') ;
         
     if (secondQuestion.charAt(0).toUpperCase() === 'Y') ++correctAnswer;
 
@@ -31,7 +34,7 @@ quizButton.addEventListener('click', () => {
     injectArea.textContent = resultString;
 
     
-    console.log('I Work');
+    
 });
 
 
