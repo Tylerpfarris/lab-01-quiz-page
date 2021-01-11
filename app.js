@@ -15,13 +15,20 @@ quizButton.addEventListener('click', () => {
     const lastName = prompt('Whats ur last name?');
 
     const firstQuestion = prompt('Is Mezcal made out of Bananas?');
+    const secondQuestion = prompt('Can Mezcal be made from different types of agave?');
+    const thirdQuestion = prompt('Does Mezcal make you hallucinate?');
 
     let correctAnswer = 0;
 
-    if (firstQuestion.charAt(0).toUpperCase() !== 'Y'){
-        ++correctAnswer;
-        console.log('way to go');
-    }
+    if (firstQuestion.charAt(0).toUpperCase() !== 'Y') ++correctAnswer;
+        
+    if (secondQuestion.charAt(0).toUpperCase() === 'Y') ++correctAnswer;
+
+    if (thirdQuestion.charAt(0).toUpperCase() !== 'Y') ++correctAnswer;
+
+    
+
+    
     console.log('I Work');
 });
 
