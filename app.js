@@ -7,11 +7,19 @@ quizButton.addEventListener('click', () => {
 
     alert('Welcome!');
 
-    const continuePrompt = prompt('Do you wanna take a quiz?');
+    const confirmation = confirm('So you wanna take a quiz?');
+    
+    if (confirmation === false) {
+        return;
+    }
 
+
+    
+    
+    console.log('I Work');
 });
 
 
 // initialize state
 
-// set event listeners to update state and DOM
+// set event listeners to update state and DOM  
