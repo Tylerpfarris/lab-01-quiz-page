@@ -31,7 +31,7 @@ quizButton.addEventListener('click', () => {
    
 //result strings with if/else conditionals
 
-    const resultStringPerfect =< `Way to go ${firstName} ${lastName}!! You got ${correctAnswer} correct!`;
+    const resultStringPerfect = `Way to go ${firstName} ${lastName}!! You got ${correctAnswer} correct!`;
     const resultStringSoSo = `Hey  ${firstName} ${lastName} not bad! You got ${correctAnswer} correct!`;
     const resultStringEhh = `Sooooo...${firstName} ${lastName} did you even try? You got ${correctAnswer} correct!`;
     const resultStringYouSuck = `Way to go ${firstName} ${lastName} YOU SUCK!!! You got ${correctAnswer} correct!`;
